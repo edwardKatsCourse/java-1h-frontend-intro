@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<body>
+
+<h2>Vue.js</h2>
+
+<div id="app">
+    <ul>
+        <li v-for="x in todos">
+            Text is : {{ x.text }}
+            <br>
+            Color: {{ x.color }}
+            <hr>
+        </li>
+    </ul>
+</div>
+
+<script>
+    myObject = new Vue({
+        el: '#app',
+        data: {
+            todos: [
+                { text: 'Learn JavaScript', color: 'Black'},
+                { text: 'Learn Vue.js', color: 'Red' },
+                { text: 'Build Something Awesome', color: 'Blue' }
+            ]
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <!--IMPORT YOUR RESOURCES HERE-->
+    <!--1. *.js (local | web)-->
+    <!--2. CSS-->
+    <!--3. images (icons)-->
+
+    <script>
+
+        function addButton() {
+            var mainElement = document.getElementById("main");
+            var buttonElement = document.createElement("button");
+
+            var inputElement = document.getElementById("buttonName");
+
+            var buttonName = inputElement.value;
+
+
+            if (buttonName === "" || buttonName === null || buttonName === undefined) {
+                alert("Button name cannot be blank!");
+                return;
+            }
+
+            buttonElement.appendChild(document.createTextNode(buttonName));
+
+
+            mainElement.appendChild(buttonElement);
+        }
+    </script>
+
+</head>
+
+<body>
+    <!--OUR WEB SITE IS HERE-->
+    <div id="main" onload="addButton()">
+        <h1> HELLO</h1>
+        <input type="text" id="buttonName">
+        <button onclick="addButton()">Create new button</button>
+
+
+
+
+
+
+    </div>
+
+</body>
+
+
+</html>
